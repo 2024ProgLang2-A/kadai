@@ -16,7 +16,7 @@
 
     <center><div id="gmap2"></div></center>
 
-    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDySg1P1qPwO2Jwp0tTGmxiSzgAN7VYAf8&callback=initMap"></script>
+    <script async src="https://maps.googleapis.com/maps/api/js?key=<%=ENV['GOOGLE_MAPS_API_KEY']%>&callback=initMap"></script>
     <script>
       function initMap() {
         var mapPosition = new google.maps.LatLng(35.4958255, 133.0267176); // 緯度経度(最初)
