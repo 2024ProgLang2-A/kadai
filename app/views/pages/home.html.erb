@@ -1,6 +1,19 @@
 <div class="px-4 py-5 my-5 text-center">
   <h1 class="display-5 fw-bold">The ideas app</h1>
   <div class="col-lg-6 mx-auto">
-    <p class="lead mb-4">Welcome to my ideas app!</p>
+<!--    <p class="lead mb-4">Welcome to my ideas app!</p> -->
+    <div id="map" style="Widrh:100%;height:400px;"></div>
+
+    <script>
+      function initMap(){
+        const map=new google.maps.Map(document.getElementById("map"),{
+          center:{lat:35.4967626,lng:133.026094},
+          map:map,
+        })
+      }
+      <script async defer 
+        src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['GOOGLE_MAPS_API_KEY']%>&callback=initMap"
+      ></script>
+    </script>
   </div>
 </div>
