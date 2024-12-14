@@ -20,13 +20,36 @@
     <script>
       function initMap() {
         var mapPosition = new google.maps.LatLng(35.4958255, 133.0267176); // 緯度経度(最初)
+//        var positionAry = [];
+//        positionAry.push(new google.maps.LatLng(35.49618854011678,133.02325287572089)); //松江高専
+        const positionAry=[
+          {lat:35.49627719300208, lng:133.02559767854345,title:"松江高専"},
+          {lat:35.494648114547715, lng:133.02729819888188,title:"生馬公民館"},
+          {lat:35.49491890199542, lng:133.0258068908248,title:"生馬小学校"},
+          {lat:35.49523638765758, lng:133.0295074970851,title:"松江清心養護学校"}
+        ];
         var map = new google.maps.Map(document.getElementById('gmap2'), {
           zoom: 17, // ズーム
           center: mapPosition
         });
-        var marker = new google.maps.Marker({
-          position: mapPosition,
-          map: map
+//        var marker = new google.maps.Marker({
+//          position: positionAry[0],
+//          map: map
+//        });
+        var markerAry=[];
+//        var infoWindowAry=[];
+
+        positionAry.forEach(pos => {
+          markerAry.push(new google.maps.Marker({
+            position: {lat:pos.lat,lng:pos.lng},
+            map:map,
+            title:pos.title
+          }));
+
+ //         infoWindowAry.push(new google.maps.infoWindow({
+ //           content: `<h3>${location.title}</h3>`
+ //         }));
+
         });
       }
     </script>
