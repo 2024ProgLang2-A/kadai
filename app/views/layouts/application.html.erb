@@ -31,8 +31,19 @@
 <div class="container">
   <%= yield %>
 </div>
+
 <style>
-      footer {
+table.sample {
+  border-collapse: collapse;
+  border: 0px solid green; /* 外側の枠線 */
+}
+table.sample td {
+  border-width: 2px 0px; /* 上下だけ引く */
+  border-color: green;  /* 線色：緑 */
+  border-style: solid; /* 線種：実線 */
+  padding: 1.3em;  /* セル内側の余白 */
+}
+footer {
   width: 100%;
   height: 120px; 
   text-align: center;
@@ -42,12 +53,23 @@
 .footer-text {
   color: #fff;
 }
-    </style>
+</style>
+
+<center>
+<table class="sample">
+<tr><td>松江工業高等専門学校</td><td>地震・洪水・土砂災害・内水氾濫</td></tr>
+<tr><td>生馬小学校</td><td>地震・洪水・土砂災害・内水氾濫</td></tr>
+<tr><td>生馬公民館</td><td>地震・洪水・土砂災害・内水氾濫</td></tr>
+<tr><td>松江清心養護学校</td><td>地震・洪水・土砂災害・内水氾濫</td></tr>
+</table>
+</center>
+<br><br><br>
+
 <footer>
-  	<p>© All rights reserved by 稲田ホールディングス.</p>
-  </footer>
+  <p>© All rights reserved by 稲田ホールディングス.</p>
+</footer>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 
-  </body>
-
+</body>
 </html>
